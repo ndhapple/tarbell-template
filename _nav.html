@@ -54,28 +54,28 @@
       <ul class="social-menu nav navbar-nav navbar-right">
           {% if opengraph_description and opengraph_image %}
           <li>
-              <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ ROOT_URL }}/{{ PATH }}&t={{ title|urlencode }}" class="facebook-icon">
+              <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ share_url }}&t={{ title|urlencode }}" class="facebook-icon">
                   <span class="hidden">Facebook</span>
               </a>
           </li>
           {% endif %}
           {% if twitter_description %}
           <li>
-              <a target="_blank" href="https://twitter.com/share?url={{ ROOT_URL }}/{{ PATH }}&text={{ twitter_description|urlencode }}" class="twitter-icon">
+              <a target="_blank" href="https://twitter.com/share?url={{ share_url }}&text={{ twitter_description }} -- {{ share_url }}" class="twitter-icon">
                 <span class="hidden">Twitter</span>
               </a>
           </li>
           {% endif %}
           {% if opengraph_description and opengraph_image %}
           <li>
-              <a target="_blank" href="https://plus.google.com/share?url={{ ROOT_URL }}/{{ PATH }}" class="gplus-icon">
+              <a target="_blank" href="https://plus.google.com/share?url={{ share_url }}" class="gplus-icon">
                 <span class="hidden">Google+</span>
               </a>
           </li>
           {% endif %}
           {% if opengraph_description and opengraph_image %}
           <li>
-              <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ ROOT_URL }}/{{ PATH }}&media={{ opengraph_image }}&description={{ opengraph_description|urlencode }}" class="pin-it-button" count-layout="horizontal">
+              <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ share_url }}&media={{ opengraph_image }}&description={{ opengraph_description|urlencode }}" class="pin-it-button" count-layout="horizontal">
                   <i class="icon-white icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
               </a>
           </li>
